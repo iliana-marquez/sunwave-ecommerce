@@ -1,0 +1,24 @@
+footer{
+    margin-bottom: 0;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+footer div{
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footerNav{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    gap: 3rem;
+}
+
+p{
+    cursor: pointer;
+}
+
+

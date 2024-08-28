@@ -1,0 +1,17 @@
+.background-image{
+    margin: 0;
+    background-image: url("/assets/img/pose.jpg");
+    background-position: 75% center;
+    min-height: 85vh;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+}
+
+.desc{
+    min-height: 100%;
+    width: 50%;
+    padding: 1rem;
+
+}

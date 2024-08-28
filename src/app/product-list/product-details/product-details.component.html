@@ -1,0 +1,20 @@
+<div class="container">
+  <div>
+    <img src="./assets/img/{{ product.image }}" alt="" />
+  </div>
+  <div class="infos">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    
+    
+    <div class="buttons">
+        
+      <button (click)="onAddToCart()" class="btn btn-light">Add to cart</button>
+      <h6 class="text-center">€ {{ product.price }}</h6>
+      
+      <button class="btn btn-light hero-btn" routerLink="/products">
+        Back to products
+      </button>
+    </div>
+  </div>
+</div>

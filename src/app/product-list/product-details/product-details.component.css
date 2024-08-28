@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 85vh;
+}
+
+img {
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.infos {
+    padding: 1rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
