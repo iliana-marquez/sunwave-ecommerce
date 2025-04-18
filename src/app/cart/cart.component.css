@@ -9,6 +9,13 @@ td {
   vertical-align: middle;
 }
 
+td img{
+  border-radius: 50%; 
+  position: center;
+  object-fit: cover;
+  object-position: center;
+}
+
 .empty-cart {
     display: flex;
     flex-direction: column;
