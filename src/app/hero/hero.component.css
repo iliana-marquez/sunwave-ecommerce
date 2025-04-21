@@ -1,11 +1,10 @@
-.hero {
+#hero {
     background-color: rgba(0, 0, 0, 0.945);
     color: rgb(240, 240, 240);
     display: flex;
     flex-flow: column;
     text-align: center;
     justify-content: center;
-    padding: 4rem;
 }
 
 img{
