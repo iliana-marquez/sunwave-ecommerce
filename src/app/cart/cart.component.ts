@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { iProduct } from '../iProduct';
+import { LayoutService } from '../layout.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, AfterViewInit {
 
   cartItems!: iProduct[];
   subtotal!: number;
@@ -15,7 +16,12 @@ export class CartComponent implements OnInit {
   total!: number;
   totaldisc!: number | undefined;
   
-  constructor (private cartService:CartService) { }
+  constructor (private cartService:CartService, private layoutService:LayoutService) { }
+
+  ngAfterViewInit(): void {
+    this.layoutService.adjustHeight('cart');
+    this.layoutService.adjustHeight('empty-cart');
+  }
 
   incQtty(product: iProduct){
     this.cartService.onQttyIncrease(product);

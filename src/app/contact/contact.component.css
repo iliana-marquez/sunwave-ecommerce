@@ -1,12 +1,10 @@
-.contact {
+#contact {
     background-color: rgba(0, 0, 0, 0.945);
     color: rgb(240, 240, 240);
-    min-height: 85vh;
     width: 100%;
     text-align: center;
     justify-content: center;
     align-items: center;
-    
     padding: 1rem;
   }
   

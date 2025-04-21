@@ -19,11 +19,11 @@ export class LayoutService {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.adjustHeight('contactSection');
-    this.adjustHeight('heroSection');
-    this.adjustHeight('cartSection');
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: Event) {
+  //   this.adjustHeight('contactSection');
+  //   this.adjustHeight('hero');
+  //   this.adjustHeight('cartSection');
+  // }
 
 }

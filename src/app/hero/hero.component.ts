@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { LayoutService } from '../layout.service';
 
 @Component({
   selector: 'app-hero',
@@ -7,24 +8,9 @@ import { AfterViewInit, Component, HostListener } from '@angular/core';
 })
 export class HeroComponent implements AfterViewInit {
 
+  constructor (private layoutService: LayoutService) {}
+
   ngAfterViewInit(): void {
-    this.adjustHeroHeight();
-  }
-
-  @HostListener ('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.adjustHeroHeight();
-  }
-
-  adjustHeroHeight(): void {
-    const footer = document.querySelector('footer');
-    const navbar = document.querySelector('.navbar')
-    const hero = document.getElementById('hero');
-
-    if (footer && hero && navbar) {
-      const footerHeight = footer.getBoundingClientRect().height;
-      const navbarHeight = navbar?.getBoundingClientRect().height;
-      hero.style.minHeight = `calc(100vh - (${footerHeight}px + ${navbarHeight}px) )`;
-    }
+    this.layoutService.adjustHeight('hero');
   }
 }

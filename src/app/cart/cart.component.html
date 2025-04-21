@@ -1,4 +1,4 @@
-<div class="container" *ngIf="cartItems.length > 0">
+<div id="cart" *ngIf="cartItems.length > 0">
     <table class="table">
         <thead>
             <tr class="text-center">
@@ -36,10 +36,10 @@
         <p class="btn btn-secondary">Check out</p>       
     </div>
     <br>
+    
 </div>
-
-<div *ngIf="cartItems.length === 0" class="text-center empty-cart">
+<div *ngIf="cartItems.length === 0" class="text-center" id="empty-cart">
     <h2>No items in your cart</h2>
     <p>Go to our <a [routerLink]="['/products']">product section</a> to start shopping!</p>
     <img src="/assets/favicon.png" alt="" />
-  </div>
+</div>
