@@ -20,9 +20,9 @@ export class CartComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.layoutService.adjustHeight('cart');
-    this.layoutService.observeNavbarChanges(['cart']);
+    this.layoutService.observeNavbarChanges('cart');
     this.layoutService.adjustHeight('empty-cart');
-    this.layoutService.observeNavbarChanges(['empty-cart']);
+    this.layoutService.observeNavbarChanges('empty-cart');
   }
 
   incQtty(product: iProduct){
