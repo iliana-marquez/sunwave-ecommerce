@@ -5,11 +5,10 @@ import { AboutComponent } from './about/about.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-list/product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
-import { HeroComponent } from './hero/hero.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  {path:'', component: HeroComponent, pathMatch:'full'},
+  {path:'', component: HomeComponent, pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'products', component: ProductListComponent},
