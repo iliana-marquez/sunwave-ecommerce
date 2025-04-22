@@ -19,11 +19,15 @@ export class LayoutService {
     }
   }
 
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event: Event) {
-  //   this.adjustHeight('contactSection');
-  //   this.adjustHeight('hero');
-  //   this.adjustHeight('cartSection');
-  // }
+  observeNavbarChanges(sectionId: string) {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar || !('ResizeObserver' in window)) return;
+  
+    const observer = new ResizeObserver( ()=>{
+     this.adjustHeight(sectionId);
+    });
+  
+    observer.observe(navbar);
+  }
 
 }

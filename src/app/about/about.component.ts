@@ -12,6 +12,7 @@ export class AboutComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.layoutService.adjustHeight('about');
+    this.layoutService.observeNavbarChanges('about');
   }
   
 

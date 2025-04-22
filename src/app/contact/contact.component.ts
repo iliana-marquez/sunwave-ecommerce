@@ -12,5 +12,6 @@ export class ContactComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.layoutService.adjustHeight('contact');
+    this.layoutService.observeNavbarChanges('contact');
   }
 }

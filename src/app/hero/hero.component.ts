@@ -12,5 +12,6 @@ export class HeroComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.layoutService.adjustHeight('hero');
+    this.layoutService.observeNavbarChanges('hero');
   }
 }
